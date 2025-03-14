@@ -154,6 +154,14 @@ img{
 .heroImg{
     display: flex;
     justify-content: end;
+    transform: scale(0.8);
+    animation: heroImgAnima .5s ease .1s forwards;
+}
+@keyframes heroImgAnima {
+    to{
+        transform: scale(1);
+    }
+    
 }
 
 /* type  */
