@@ -10,8 +10,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    user-select: none;
-    scroll-behavior: smooth;
 }
 a{
     text-decoration: none;
@@ -25,10 +23,15 @@ input,button{
     outline: none;
     cursor: pointer;
 }
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
 :root{
     --mainColorText: #8B8E99;
     --cardBackColor: #F6F6F6;
     --btnColor: #3858D6;
+    --titleThemeColor: #3858D6;
     --sectionsTitleFontSize: 36px;
 }
 .container{
@@ -38,17 +41,18 @@ input,button{
     padding: 0 15px;
 }
 
-
+/* header  */
 .header{
-    background: linear-gradient(155.28deg, #383638 2.06%, #0B0B0B 33.08%);
-    min-height: 877px;
-    position: relative;
+    position: absolute;
+    width: 100%;
 }
 .navbar{
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 99;
+    width: 100%;
 }
 .navCollaction{
     display: flex;
@@ -59,4 +63,276 @@ input,button{
     color: var(--mainColorText);
     font-family: Poppins;
     font-weight: 500;
+    transition: .3s;
+    position: relative;
+}
+.navItems:hover{
+    color: var(--cardBackColor);
+}
+.dropDown{
+    transform-origin: top;
+    position: absolute;
+    background: #333;
+    width: 100px;
+    transform: scaleY(0);
+    text-align: center;
+    border-radius: 20px;
+    transition: .2s;
+    padding: 15px 10px;
+    line-height: 3;
+}
+.navItems:hover .dropDown{
+    transform: scaleY(1);
+}
+.navBard{
+    background: transparent;
+    font-size: 2rem;
+    display: none;
+}
+
+/* hero  */
+.hero{
+    background: linear-gradient(155.28deg, #383638 2.06%, #0B0B0B 33.08%);
+}
+.heroWrapper{
+    min-height: 877px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heroDesc, .heroImg{
+    width: 50%;
+}
+.heroDesc h1{
+    max-width: 440px;
+    width: 100%;
+    font-size: 64px;
+    font-family: Poppins;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.heroDesc p{
+    max-width: 459px;
+    width: 100%;
+    color: var(--mainColorText);
+    font-family: Poppins;
+    font-weight: 500;
+}
+.heroInput{
+    margin-top: 47px;
+    max-width: 443px;
+    height: 60px;
+    border: 15px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;justify-content: space-between;
+    padding: 8px 9px 8px 15px;
+    border-radius: 15px;
+}
+.int{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.int input{
+    font-size: 16px;
+    font-family: Poppins;
+}
+.intSearch{
+    padding: 10px 20px;
+    background: var(--btnColor);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Poppins;
+    color: #FFFFFF;
+    border-radius: 9px;
+    transition: .3s;
+}
+.intSearch:hover{
+    opacity: .9;
+}
+.heroImg{
+    display: flex;
+    justify-content: end;
+}
+
+/* type  */
+.typeWrapper{
+    margin-top: 73px;
+    min-height: 239px;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    place-items: center;
+}
+.typeCard{
+    background: var(--cardBackColor);
+    max-width: 354px;
+    width: 100%;
+    height: 239px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+}
+.typecardDesc p:first-child{
+    font-weight: 700;
+    font-size: 36px;
+    font-family: Inter;
+}
+.typecardDesc p:last-child{
+    margin-top: 9px;
+    max-width: 173px;
+    width: 100%;
+    font-family: Inter;
+    font-weight: 500;
+    color: var(--mainColorText);
+}
+
+/* latest  */
+.latestWrapper{
+    margin-top: 135px;
+    text-align: center;
+}
+.latestWrapper > p:first-child{
+    font-family: Inter;
+    font-weight: 500;
+    color: var(--titleThemeColor);
+}
+.latestWrapper p:nth-child(2){
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 36px;
+}
+.latestCardWrapper{
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 49px;
+}
+.latestCard{
+    max-width: 334px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.cardDetiles{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.latestCardImg{
+    background: var(--cardBackColor);
+}
+.latestCardImg img{
+    margin: 29px auto;
+    transition: .3s;
+}
+
+.latestCardImg:hover img{
+    transform: scale(1.03);
+}
+.cardDetiles{
+    position: absolute;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    right: -80px;
+    transition: .3s;
+}
+.latestCard:hover .cardDetiles{
+    right: 0;
+}
+.cardDetiles img{
+    transition: .3s;
+}
+.cardDetiles img:hover{
+    transform: scale(1.02);
+}
+.latestCardTitle{
+    margin-top: 11px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 24px;
+}
+.latestCardRating{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.latestCardPrice del{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--mainColorText);
+}
+.latestCardPrice span{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 24px;
+}
+.latestWrapper button{
+    margin-top: 69px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 18px;
+    background: var(--btnColor);
+    color: #FFFFFF;
+    padding: 10px 50px;
+    border-radius: 15px;
+    transition: .3s;
+}
+.latestWrapper button:hover{
+    opacity: .9;
+}
+
+
+/* people  */
+.peopleWrapper{
+    margin-top: 135px;
+}
+.peopleTheme{
+    color: var(--titleThemeColor);
+    font-family: Inter;
+    font-weight: 500;
+    text-align: center;
+}
+.peopleTitle{
+    margin-top: 5px;
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+.peopleCardsWrapper{
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 47px;
+}
+.peopleCard{
+    padding: 30px 42px 30px 34px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: var(--cardBackColor);
+    border-radius: 20px;
+}
+.peopleCardTitle{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+}
+.peopleCardText{
+    margin-top: 10px;
+    max-width: 256px;
+    width: 100%;
+    font-family: Inter;
+    font-weight: 500;
+    color: var(--mainColorText);
+    margin-bottom: 9px;
 }
