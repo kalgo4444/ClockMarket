@@ -98,6 +98,12 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* footer  */
+    .footerWrapper{
+        grid-template-columns: 2fr 1fr;
+        padding: 30px 40px;
+    }
+
 }
 
 
@@ -167,6 +173,13 @@
     .subsItn button{
         padding: 12px 15px;
         font-size: 14px;
+    }
+
+    /* footer  */
+    .footerWrapper{
+        grid-template-columns: 1fr;
+    }
+    .footerCollaction{
     }
 }
 

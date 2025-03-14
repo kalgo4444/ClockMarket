@@ -159,8 +159,6 @@ img{
 /* type  */
 .typeWrapper{
     margin-top: 73px;
-    min-height: 239px;
-    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -176,6 +174,7 @@ img{
     align-items: center;
     justify-content: center;
     gap: 26px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .typecardDesc p:first-child{
     font-weight: 700;
@@ -321,6 +320,7 @@ img{
     gap: 28px;
     background: var(--cardBackColor);
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .peopleCardTitle{
     font-family: Inter;
@@ -346,6 +346,7 @@ img{
     display: flex;
     align-items: center;
     padding: 33px 110px 33px 97px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .subsImg, .subsDesc{
     width: 50%;
@@ -379,6 +380,7 @@ img{
     justify-content: space-between;
     border-radius: 15px;
     padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .subsItn input{
     text-indent: 30px;
@@ -408,4 +410,36 @@ img{
 
 .footer{
     margin-top: 80px;
+    background: #0B0B0B;
+}
+.footerWrapper{
+    padding: 30px 0;
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 30px;
+}
+.ftrTitle{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.ftrText{
+    max-width: 200px;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+}
+.ftrItmes{
+    font-size: 18px;
+    font-family: Poppins;
+    font-weight: 500;
+    color: var(--mainColorText);
+    transition: .2s;
+    line-height: 2;
+}
+.ftrItmes:hover{
+    color: var(--cardBackColor);
 }
