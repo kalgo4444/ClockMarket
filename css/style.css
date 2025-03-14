@@ -1,0 +1,62 @@
+@font-face {
+    font-family: Inter;
+    src: url("../fonts/Inter_18pt-Regular.ttf");
+}
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+input,button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+:root{
+    --mainColorText: #8B8E99;
+    --cardBackColor: #F6F6F6;
+    --btnColor: #3858D6;
+    --sectionsTitleFontSize: 36px;
+}
+.container{
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.header{
+    background: linear-gradient(155.28deg, #383638 2.06%, #0B0B0B 33.08%);
+    min-height: 877px;
+    position: relative;
+}
+.navbar{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navCollaction{
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+.navItems{
+    color: var(--mainColorText);
+    font-family: Poppins;
+    font-weight: 500;
+}
