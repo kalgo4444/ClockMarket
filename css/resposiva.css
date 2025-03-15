@@ -125,6 +125,16 @@
         margin-top: 40px;
         grid-template-columns: 1fr;
     }
+    .heroInput{
+        width: 100%;
+    }
+    .int input{
+        font-size: 14px;
+    }
+    .intSearch{
+        font-size: 16px;
+        padding: 13px 20px;
+    }
 
     /* latest  */
     .latestWrapper{
@@ -170,9 +180,10 @@
     }
     .subsItn input{
         text-indent: 10px;
+        font-size: 14px;
     }
     .subsItn button{
-        padding: 12px 15px;
+        padding: 15px 12px;
         font-size: 14px;
     }
 
@@ -224,10 +235,10 @@
     }
     .subsItn input{
         text-indent: 5px;
-        font-size: 14px;
+        font-size: 12px;
     }
     .subsItn button{
-        padding: 15px 12px;
-        font-size: 14px;
+        padding: 15px 5px;
+        font-size: 12px;
     }
 }
